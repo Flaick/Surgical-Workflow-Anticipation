@@ -1,0 +1,27 @@
+module : cnn.feature_extraction_multitask_ii.FeatureExtraction # tool
+model : cnn.TwoHeadResNet50Model_multitask_ii # tool
+data_root : /home/kun/Desktop/miccai21/TeCNO/Videos/ # ./data/ #
+dataset : cholec80_feature_extract.Cholec80FeatureExtract # tool
+out_features : 7
+input_height : 224
+input_width : 224
+batch_size : 80
+fps_sampling : 1
+fps_sampling_test : 1
+learning_rate : 1e-5
+dataset_mode : img_multilabel
+early_stopping_metric : val_acc_tool
+pretrained : True
+save_top_k : 1
+max_epochs : 100 # 30
+min_epochs : 40 # 20
+num_tasks : 2
+num_sanity_val_steps : 4
+test_extract : True
+#accelerator: ddp_spawn
+num_workers : 5
+gpus : ['1'] # all available -1
+horizon: 3
+num_ins: 5
+num_phase: 7
+box_emb_size: 64

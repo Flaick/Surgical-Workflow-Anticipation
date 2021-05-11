@@ -1,0 +1,27 @@
+module : mstcn.tecno.TeCNO
+model : mstcn.MultiStageModel
+dataset : cholec80.Cholec80
+out_features : 7
+num_workers : 3
+batch_size : 1
+features_per_seconds : 1
+features_subsampling : 25
+log_every_n_steps : 1
+mstcn_causal_conv : True
+learning_rate : 0.002
+min_epochs : 30
+max_epochs : 100
+mstcn_layers : 8
+mstcn_f_maps : 32
+mstcn_f_dim: 2304
+mstcn_stages : 2
+early_stopping_metric : val_WMAE_tool
+save_top_k : 1
+gpus : ['1']
+data_root : /home/kun/Desktop/miccai21/resnet_pretrain_lightning/logs/210503-143402_FeatureExtraction_Cholec80FeatureExtract_cnn_TwoHeadResNet50Model_multitask_ii/cholec80_pickle_export_5/
+num_sanity_val_steps: 0
+horizon: 5
+num_ins: 5
+num_phase: 7
+
+
