@@ -1,4 +1,4 @@
-# Surgical-Workflow-Anticipation
+# Surgical Workflow Anticipation
 Surgical Instrument &amp; Phase Anticipation      
 Paper entitled \<Surgical Workflow Anticipation usingInstrument Interaction\> is accepted by MICCAI 2021 conference!
 
